@@ -15,7 +15,7 @@ class FakeTeamRepository {
                 description = "Desarrollador Frontend"
             ),
             TeamMember(
-              name = "Marcelo Detlegsen",
+              name = "Marcelo Detlefsen",
               description = "Desarrollador Backend"
             ),
             TeamMember(
