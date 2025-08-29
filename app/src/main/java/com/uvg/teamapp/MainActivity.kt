@@ -63,11 +63,13 @@ fun MainScreen(modifier: Modifier = Modifier) {
             modifier = modifier
         )
     } else {
-        //Esto es lo que va a implementar Alemanuel
-        // TeamDetailScreen(
-        //     member = selectedMember!!,
-        //     onBack = { selectedMember = null }
-        // )
+        TeamDetailScreen(
+            member = selectedMember!!,
+            onBack = {
+                selectedMember = null
+            },
+            modifier = modifier
+        )
     }
 }
 
