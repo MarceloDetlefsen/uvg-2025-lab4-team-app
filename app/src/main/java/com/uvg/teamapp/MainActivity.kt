@@ -70,6 +70,7 @@ fun MainScreen() {
 // Pantalla de detalles de un miembro
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
+
 fun TeamListScreen(
     members: List<TeamMember>,
     onMemberClick: (TeamMember) -> Unit
