@@ -37,16 +37,40 @@ class MainActivity : ComponentActivity() {
         setContent {
             TeamAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) {
-                    //MainScreen()
+                    MainScreen()
                 }
             }
         }
     }
 }
 
+// Pantalla inicial del programa
+@Composable
+fun MainScreen() {
+    val members = FakeTeamRepository.getTeamMembers()
+
+    var selectedMember by remember { mutableStateOf<TeamMember?>(null) }
+
+    if (selectedMember == null) {
+        TeamListScreen(
+            members = members,
+            onMemberClick = { member ->
+                selectedMember = member
+            }
+        )
+    } else {
+        //Esto es lo que va a implementar Alemanuel
+        // TeamDetailScreen(
+        //     member = selectedMember!!,
+        //     onBack = { selectedMember = null }
+        // )
+    }
+}
+
 // Pantalla de detalles de un miembro
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
+
 fun TeamListScreen(
     members: List<TeamMember>,
     onMemberClick: (TeamMember) -> Unit
