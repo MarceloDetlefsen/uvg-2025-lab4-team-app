@@ -27,3 +27,16 @@ Al finalizar:
     - Capturas de pantalla de la app funcionando.
     - Explicación de cómo resolvieron los conflictos y organizaron el flujo de trabajo.
     - Reflexión del equipo sobre lo aprendido.
+
+## 📱 Capturas de pantalla de la app funcionando.
+
+![mainscreen](https://github.com/user-attachments/assets/2e0e238a-475b-4418-97e8-7e5d802e0e0b)
+
+![alejandrodescription](https://github.com/user-attachments/assets/dc3b89b6-8673-4b95-8ec5-afc9cdd3e902)
+
+![marcelodescription jgp](https://github.com/user-attachments/assets/00787bc2-165f-4364-bbec-15e602d75e82)
+
+![juliandescripition](https://github.com/user-attachments/assets/3e937ce1-2e6b-4b21-9dcf-e9ff3d4e60fc)
+
+## 🛠️ Organización del flujo de trabajo
+Para este laboratorio se dividieron los features a desarrollar entre los distintos integrantes del grupo. De esta manera con cada feature se creó una nueva rama para su desarrollo y posteriormente realizar una pull request hacia la rama develop. De esta manera se controló de mejor manera el contenido desarrollado a la vez que su orden y cada integrante pudo revisar un PR distinto, de manera que los integrantes aprobaran el contenido desarrollado media vez este se haya calificado como correcto hasta completar el desarrollo.
