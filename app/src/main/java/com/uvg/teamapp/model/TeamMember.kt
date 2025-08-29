@@ -7,13 +7,4 @@ Julián Divas - 24687
 data class TeamMember (
     val name: String,
     val description: String
-) {
-
-    fun getName(): String{
-        return name
-    }
-
-    fun getDescription(): String{
-        return description
-    }
-}
+)

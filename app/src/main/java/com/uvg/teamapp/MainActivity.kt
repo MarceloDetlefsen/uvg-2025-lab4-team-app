@@ -4,6 +4,8 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -36,18 +38,19 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             TeamAppTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) {
-                    MainScreen()
+                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                    MainScreen(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
     }
 }
 
-// Pantalla inicial del programa
+
 @Composable
-fun MainScreen() {
-    val members = FakeTeamRepository.getTeamMembers()
+fun MainScreen(modifier: Modifier = Modifier) {
+    val repository = FakeTeamRepository()
+    val members = repository.getTeamMembers()
 
     var selectedMember by remember { mutableStateOf<TeamMember?>(null) }
 
@@ -56,7 +59,8 @@ fun MainScreen() {
             members = members,
             onMemberClick = { member ->
                 selectedMember = member
-            }
+            },
+            modifier = modifier
         )
     } else {
         //Esto es lo que va a implementar Alemanuel
@@ -67,20 +71,21 @@ fun MainScreen() {
     }
 }
 
-// Pantalla de detalles de un miembro
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-
 fun TeamListScreen(
     members: List<TeamMember>,
-    onMemberClick: (TeamMember) -> Unit
+    onMemberClick: (TeamMember) -> Unit,
+    modifier: Modifier = Modifier
 ) {
     Scaffold(
         topBar = {
             TopAppBar(
                 title = { Text("Miembros del Equipo") }
             )
-        }
+        },
+        modifier = modifier
     ) { innerPadding ->
         LazyColumn(
             modifier = Modifier
