@@ -37,7 +37,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             TeamAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) {
-                    MainScreen()
+                    //MainScreen()
                 }
             }
         }
