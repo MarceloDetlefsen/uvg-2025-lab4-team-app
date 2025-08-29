@@ -40,3 +40,9 @@ Al finalizar:
 
 ## 🛠️ Organización del flujo de trabajo
 Para este laboratorio se dividieron los features a desarrollar entre los distintos integrantes del grupo. De esta manera con cada feature se creó una nueva rama para su desarrollo y posteriormente realizar una pull request hacia la rama develop. De esta manera se controló de mejor manera el contenido desarrollado a la vez que su orden y cada integrante pudo revisar un PR distinto, de manera que los integrantes aprobaran el contenido desarrollado media vez este se haya calificado como correcto hasta completar el desarrollo.
+
+## ❌ Resolución de conflictos
+Para resolver los conflictos en primera instancia se identificó el lugar donde se generó. Al navegar al punto del conflicto se contrastaron las diferencias por las que se generó el conflicto, como distintas lineas de código modificadas que fue el conflicto más visto en esta práctica. En este momento decidimos si mantener una de las versiones de la rama, combinarlas o reescribir esa área de conflicto para eliminarlo. Finalmente se completaron los merges y se subieron los cambios realizados. Si bien en esta práctica no hubieron conflictos muy dificultosos de resolver, es una buena práctica para futuros problemas que podrían surgir.
+
+## 🤓☝️ Reflexión sobre lo aprendido
+Durante el laboratorio 4 se aprendió a utilizar un flujo de trabajo adecuado en un repositorio. Si bien anteriormente se conocían los pull request, no sabíamos como aplicarlos correctamente. Gracias a esta práctica comprendimos mejor como se trabaja de forma profesional con las ramas en un repositorio, mediante la creación de estas para cada funcionalidad desarrollada. Tambien, es buena practica realizar merges a través de los pull requests para asegurarse de aplicar cambios revisdos.
